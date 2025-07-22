@@ -1,6 +1,5 @@
 package org.example.character;
 
-
 import org.example.interfaces.Attacker;
 
 public class Wizard extends Character implements Attacker {
@@ -39,7 +38,7 @@ public class Wizard extends Character implements Attacker {
         if (isFireball && mana >= 5) {
             damage = intelligence;
             mana -= 5;
-        } else if (mana >=1) {
+        } else if (mana >= 1) {
             damage = 2;
             mana += 1;
         } else {
@@ -54,7 +53,7 @@ public class Wizard extends Character implements Attacker {
             target.setAlive(false);
         }
         System.out.println(getName() + " attacks " + target.getName() + " with " +
-                (damage == 0 ? "no energy" : isFireball ? "Fireball" : "Staff hit")
-                + " and deals " + damage + " damage. Target HP is now " + target.getHp());
+                (damage == 0 ? "😵 No energy" : isFireball ? "🔥 Fireball" : "🪄 Staff hit")
+                + " and deals " + damage + " damage. Opponnent's HP is now: " + target.getHp());
     }
 }

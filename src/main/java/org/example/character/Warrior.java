@@ -53,7 +53,7 @@ public class Warrior extends Character implements Attacker {
             target.setAlive(false);
         }
         System.out.println(getName() + " attacks " + target.getName() + " with " +
-                (damage == 0 ? "No energy" : isHeavyAttack ? "Heavy Attack" : "Weak Attack") +
-                " and deals " + damage + " damage. Current HP: " + target.getHp());
+                (damage == 0 ? "😵 No energy" : isHeavyAttack ? "⚔️ Heavy Attack" : "👊 Weak Attack") +
+                " and deals " + damage + " damage. Opponent's HP is now: " + target.getHp());
     }
 }

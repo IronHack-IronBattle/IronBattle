@@ -51,7 +51,7 @@ public class BattleSimulator {
         System.out.print("Enter character name: ");
         String name = scanner.nextLine();
 
-        System.out.println("Choose type (1= Warrior, 2 = Wizard): ");
+        System.out.println("Choose type (1= Warrior 🥷, 2 = Wizard 🧙‍♂️): ");
         String type = scanner.nextLine();
 
         Character newChar = null;
@@ -112,25 +112,34 @@ public class BattleSimulator {
         int round = 1;
 
         while (a.isAlive() && b.isAlive()) {
-            System.out.println("\n Round " + round);
 
             ((Attacker) a).attack(b);
             ((Attacker) b).attack(a);
 
-            System.out.println(a.getName() + " HP: " + a.getHp());
-            System.out.println(b.getName() + " HP: " + b.getHp());
+            System.out.println("\n 🔁 Round " + round);
+
+            System.out.println(a.getName() + " HP ❤️: " + a.getHp());
+            System.out.println(b.getName() + " HP ❤️: " + b.getHp());
 
             round++;
+            try {
+                Thread.sleep(1000); // pausa de 1 segundo
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
         if (!a.isAlive() && !b.isAlive()) {
-            System.out.println("It's a tie! Restarting battle...");
+            System.out.println("It's a tie! 🤝 Restarting battle...");
             a.setHp(a.getHp()); a.setAlive(true);
             b.setHp(b.getHp()); b.setAlive(true);
             simulateBattle(a, b);
         } else {
+            Character defeated = !a.isAlive() ? a : b;
+            System.out.println(defeated.getName() + " has lost! 💀💀");
+
             Character winner = a.isAlive() ? a : b;
-            System.out.println("Winner: " + winner.getName() + "!");
+            System.out.println("👑 The winner is " + winner.getName() + "!");
         }
     }
 }
