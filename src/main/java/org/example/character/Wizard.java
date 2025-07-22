@@ -1,5 +1,3 @@
-public class Wizard package org.example.character;
-
 package org.example.character;
 
 import org.example.interfaces.Attacker;
@@ -9,7 +7,7 @@ public class Wizard extends Character implements Attacker {
     private int mana;
     private int intelligence;
 
-    public Wizard(String name, int hp, int mana, int intelligence) {
+    public Wizard(String name, int hp) {
         super(name, hp);
         this.mana = 10 + (int) (Math.random() * 41);
         this.intelligence = 1 + (int) (Math.random() * 50);
@@ -33,14 +31,14 @@ public class Wizard extends Character implements Attacker {
     }
 
     //Defining the attack
-    public int attack(Character target) {
+    public void attack(Character target) {
         boolean isFireball = Math.random() < 0.5; // 50% chance
         int damage;
 
         if (isFireball && mana >= 5) {
             damage = intelligence;
             mana -= 5;
-        } else if (mana >=1) {
+        } else if (mana >= 1) {
             damage = 2;
             mana += 1;
         } else {
@@ -55,9 +53,7 @@ public class Wizard extends Character implements Attacker {
             target.setAlive(false);
         }
         System.out.println(getName() + " attacks " + target.getName() + " with " +
-                (damage == 0 ? "no energy" : isFireball ? "Fireball" : "Staff hit")
-                + " and deals " + damage + " damage. Target HP is now " + target.getHp());
-
-        return damage;
+                (damage == 0 ? "😵 No energy" : isFireball ? "🔥 Fireball" : "🪄 Staff hit")
+                + " and deals " + damage + " damage. Opponnent's HP is now: " + target.getHp());
     }
 }
