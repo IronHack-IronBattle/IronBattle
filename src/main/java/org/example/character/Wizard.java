@@ -1,5 +1,3 @@
-package org.example;
-
 public class Wizard package org.example.character;
 
 package org.example.character;
