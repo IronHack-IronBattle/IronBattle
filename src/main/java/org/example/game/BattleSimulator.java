@@ -1,6 +1,8 @@
 package org.example.game;
 
 
+import org.example.character.*;
+import org.example.character.Character;
 import org.example.interfaces.Attacker;
 
 import java.util.Scanner;
@@ -53,9 +55,9 @@ public class BattleSimulator {
         Character newChar = null;
 
         if (type.equals("1")) {
-            newChar = new Warrior(name);
+            newChar = new Warrior(name, 5);
         } else if (type.equals("2")) {
-            newChar = new Wizard(name);
+            newChar = new Wizard(name, 5);
         } else {
             System.out.println("Invalid type. Character not created.");
             return;

@@ -31,7 +31,7 @@ public class Warrior extends Character implements Attacker {
     }
 
     //Defining the attack
-    public int attack(Character target) {
+    public void attack(Character target) {
         boolean isHeavyAttack = Math.random() < 0.5; // 50% chance
         int damage;
 
@@ -55,8 +55,5 @@ public class Warrior extends Character implements Attacker {
         System.out.println(getName() + " attacks " + target.getName() + " with " +
                 (damage == 0 ? "No energy" : isHeavyAttack ? "Heavy Attack" : "Weak Attack") +
                 " and deals " + damage + " damage. Current HP: " + target.getHp());
-
-
-        return damage;
     }
 }
