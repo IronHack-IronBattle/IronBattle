@@ -2,6 +2,8 @@ package org.example.game;
 
 
 import org.example.character.*;
+import org.example.character.Warrior;
+import org.example.character.Wizard;
 import org.example.character.Character;
 import org.example.interfaces.Attacker;
 
@@ -54,10 +56,14 @@ public class BattleSimulator {
 
         Character newChar = null;
 
+        int hp = 0;
+
         if (type.equals("1")) {
-            newChar = new Warrior(name, 5);
+            hp = 100 + (int)(Math.random() * 101);
+            newChar = new Warrior(name, hp);
         } else if (type.equals("2")) {
-            newChar = new Wizard(name, 5);
+            hp = 50 + (int)(Math.random() * 51);
+            newChar = new Wizard(name, hp);
         } else {
             System.out.println("Invalid type. Character not created.");
             return;
@@ -119,8 +125,8 @@ public class BattleSimulator {
 
         if (!a.isAlive() && !b.isAlive()) {
             System.out.println("It's a tie! Restarting battle...");
-            a.setHp(a.getInitialHp()); a.setAlive(true);
-            b.setHp(b.getInitialHp()); b.setAlive(true);
+            a.setHp(a.getHp()); a.setAlive(true);
+            b.setHp(b.getHp()); b.setAlive(true);
             simulateBattle(a, b);
         } else {
             Character winner = a.isAlive() ? a : b;
