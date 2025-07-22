@@ -16,7 +16,7 @@ public class BattleSimulator {
     private static final Scanner scanner = new Scanner(System.in);
     private static final List<Character> characters = new ArrayList<>();
 
-    public static void main(String[] args) {
+    public static void startGame(){
         System.out.println("Welcome to IronBattle Simulator!");
 
         boolean running = true;
@@ -84,7 +84,7 @@ public class BattleSimulator {
         }
     }
 
-    private static void startBattle() {
+    public static void startBattle() {
         if (characters.size() < 2) {
             System.out.println("Not enough characters to start battle");
             return;
@@ -96,7 +96,7 @@ public class BattleSimulator {
         System.out.println("Enter index of second fighter: ");
         int idx2 = Integer.parseInt(scanner.nextLine()) -1;
 
-        if (idx1 == idx2 || idx1 < 0 || idx2 < 0 || idx1 >= characters.size() || idx2 >= characters.size()) {
+        if (idx1 < 0 || idx2 < 0 || idx1 >= characters.size() || idx2 >= characters.size()) {
             System.out.println("Invalid selection");
             return;
         }
