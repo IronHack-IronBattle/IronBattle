@@ -40,11 +40,11 @@ public class BattleSimulator {
 
     private static void printMenu() {
         System.out.println("\n--- Main Menu ---");
-        System.out.println("1. Create new character");
-        System.out.println("2. List all characters");
-        System.out.println("3. Start battle");
-        System.out.println("4. Exit");
-        System.out.println("Choose an option: ");
+        System.out.println("1️⃣ Create new character");
+        System.out.println("2️⃣ List all characters");
+        System.out.println("3️⃣ Start battle");
+        System.out.println("4️⃣ Exit");
+        System.out.println("🔎 Choose an option: ");
     }
 
     private static void createCharacter() {
@@ -80,7 +80,7 @@ public class BattleSimulator {
         System.out.println("\n📋 List of Characters:");
         for (int i = 0; i < characters.size(); i++) {
             Character c = characters.get(i);
-            System.out.printf("%d. %s (%s) - HP: %d\n", i + 1, c.getName(), c.getClass().getSimpleName(), c.getHp());
+            System.out.printf("%d. %s (%s) - HP ❤️: %d\n", i + 1, c.getName(), c.getClass().getSimpleName(), c.getHp());
         }
     }
 
