@@ -1,8 +1,5 @@
-package org.example;
-
-public class Wizard package org.example.character;
-
 package org.example.character;
+
 
 import org.example.interfaces.Attacker;
 
@@ -35,7 +32,7 @@ public class Wizard extends Character implements Attacker {
     }
 
     //Defining the attack
-    public int attack(Character target) {
+    public void attack(Character target) {
         boolean isFireball = Math.random() < 0.5; // 50% chance
         int damage;
 
@@ -59,7 +56,5 @@ public class Wizard extends Character implements Attacker {
         System.out.println(getName() + " attacks " + target.getName() + " with " +
                 (damage == 0 ? "no energy" : isFireball ? "Fireball" : "Staff hit")
                 + " and deals " + damage + " damage. Target HP is now " + target.getHp());
-
-        return damage;
     }
 }
