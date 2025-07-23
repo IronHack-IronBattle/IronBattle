@@ -74,17 +74,17 @@ only one is left standing.... or none at all!
 ## ⚙️ About the Project
 
 ### 🧩 Overall Development
-1. Development Flow and Pace
+1. **Development Flow and Pace**
    - We followed a clear sequence:
    → Planning → Implementation → Testing → Documentation Updates
    - Development was carried out on a daily basis 
    - This ensured steady progress and allowed for continuous refinement of the project
-2. Team Collaboration
+2. **Team Collaboration**
    - Tasks were organized and tracked using GitHub Projects
    - We used Slack for quick asynchronous communication
    - Zoom was used for real-time discussions and coordination
    - The setup enabled effective task distribution and strong team alignment
-3. Codebase Structure and Consistency
+3. **Codebase Structure and Consistency**
    - We defined the project structure and coding style during the planning phase
    - The whole team adhered to those guidelines throughout development
    - All code was:
@@ -92,15 +92,15 @@ only one is left standing.... or none at all!
      - Released in sync to ensure consistency and stability
 
 ### ⚠️ Biggest Challenges
-1. Project Setup:
+1. **Project Setup:**
    - The project wasn’t properly structured from the beginning. While each developer was familiar with the intended 
    architecture, the main folder structure and empty packages were not established early on.
    - Developers worked independently on separate branches, each with a different folder organization, which led to 
      conflicts.
-2. Team Organization & Communication:
+2. **Team Organization & Communication:**
    - No Team Leader was designated to set up the main folder structure or create the GitHub repository.
    - It was our first time collaborating in teams for a Web Development project, which made coordination more challenging.
-3. GitHub Workflow:
+3. **GitHub Workflow:**
    - Our GitHub knowledge was limited at the start.
    - We encountered issues when merging branches and updating the main branch.
    - Navigating GitHub and using the correct commands also presented some difficulties.
