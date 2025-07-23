@@ -40,8 +40,8 @@ public class BattleSimulator {
 
     private static void printMenu() {
         System.out.println("\n--- Main Menu ---");
-        System.out.println("1️⃣ Create new character");
-        System.out.println("2️⃣ List all characters");
+        System.out.println("1️⃣ Create new player");
+        System.out.println("2️⃣ List all players");
         System.out.println("3️⃣ Start battle");
         System.out.println("4️⃣ Exit");
         System.out.println("🔎 Choose an option: ");
@@ -111,6 +111,9 @@ public class BattleSimulator {
     private static void simulateBattle(Character a, Character b) {
         int round = 1;
 
+        int originalHpA = a.getHp();
+        int originalHpB = b.getHp();
+
         while (a.isAlive() && b.isAlive()) {
 
             ((Attacker) a).attack(b);
@@ -131,8 +134,8 @@ public class BattleSimulator {
 
         if (!a.isAlive() && !b.isAlive()) {
             System.out.println("It's a tie! 🤝 Restarting battle...");
-            a.setHp(a.getHp()); a.setAlive(true);
-            b.setHp(b.getHp()); b.setAlive(true);
+            a.setHp(originalHpA); a.setAlive(true);
+            b.setHp(originalHpB); b.setAlive(true);
             simulateBattle(a, b);
         } else {
             Character defeated = !a.isAlive() ? a : b;
