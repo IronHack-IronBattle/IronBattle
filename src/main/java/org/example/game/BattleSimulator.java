@@ -40,8 +40,8 @@ public class BattleSimulator {
 
     private static void printMenu() {
         System.out.println("\n--- Main Menu ---");
-        System.out.println("1️⃣ Create new character");
-        System.out.println("2️⃣ List all characters");
+        System.out.println("1️⃣ Create new player");
+        System.out.println("2️⃣ List all players");
         System.out.println("3️⃣ Start battle");
         System.out.println("4️⃣ Exit");
         System.out.println("🔎 Choose an option: ");
