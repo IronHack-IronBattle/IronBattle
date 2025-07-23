@@ -111,6 +111,9 @@ public class BattleSimulator {
     private static void simulateBattle(Character a, Character b) {
         int round = 1;
 
+        int originalHpA = a.getHp();
+        int originalHpB = b.getHp();
+
         while (a.isAlive() && b.isAlive()) {
 
             ((Attacker) a).attack(b);
@@ -131,8 +134,8 @@ public class BattleSimulator {
 
         if (!a.isAlive() && !b.isAlive()) {
             System.out.println("It's a tie! 🤝 Restarting battle...");
-            a.setHp(a.getHp()); a.setAlive(true);
-            b.setHp(b.getHp()); b.setAlive(true);
+            a.setHp(originalHpA); a.setAlive(true);
+            b.setHp(originalHpB); b.setAlive(true);
             simulateBattle(a, b);
         } else {
             Character defeated = !a.isAlive() ? a : b;
