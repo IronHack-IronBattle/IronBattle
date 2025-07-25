@@ -4,11 +4,7 @@ target/
 !**/src/test/**/target/
 
 ### IntelliJ IDEA ###
-<<<<<<< HEAD
-chacterinterface/.idea/
-=======
-.idea/
->>>>>>> b7ea04baa7cbcfeae765302cbd652a5af32af0fb
+
 .idea
 .idea/*
 .idea/modules.xml
@@ -43,4 +39,7 @@ build/
 
 ### Mac OS ###
 .DS_Store.idea/
+<<<<<<< HEAD
 .idea/
+=======
+>>>>>>> main
